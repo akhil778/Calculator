@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'echo "in build"'
-        sh 'grunt'
+        sh 'npm install'
       }
     }
     stage('Test') {
