@@ -5,6 +5,7 @@ pipeline {
       steps {
         echo 'build'
         bat 'npm -v'
+        bat 'grunt -v'
       }
     }
   }
