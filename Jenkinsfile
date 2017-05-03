@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'build'
-        bat 'gulp -v'
+        bat 'npm -v'
       }
     }
   }
