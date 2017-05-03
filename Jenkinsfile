@@ -3,9 +3,18 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo 'build'
-        bat 'npm -v'
-        bat 'npm install'
+        parallel(
+          "Build": {
+            echo 'build'
+            bat 'npm -v'
+            bat 'npm install'
+            
+          },
+          "": {
+            bat 'grunt'
+            
+          }
+        )
       }
     }
   }
