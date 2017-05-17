@@ -1,13 +1,6 @@
 pipeline {
     agent any
-
-    try {
-
-       stage('Checkout'){
-
-          checkout scm
-       }
-
+    
        stage('Test'){
 
          env.NODE_ENV = "test"
