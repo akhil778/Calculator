@@ -8,9 +8,10 @@ pipeline {
             echo 'build'
             bat 'npm -v'
             bat 'npm install'
+            bat 'grunt -v'
             
           },
-          "": {
+          "error": {
             bat 'grunt'
             
           }
