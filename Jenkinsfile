@@ -16,7 +16,7 @@ pipeline {
 
        stage('Build Docker'){
 
-            sh './dockerBuild.sh'
+            //sh './dockerBuild.sh'
        }
 
        stage('Deploy'){
@@ -45,9 +45,9 @@ pipeline {
 
 
     }
-    catch (err) {
+   // catch (err) {
 
-        currentBuild.result = "FAILURE"
+     //   currentBuild.result = "FAILURE"
 
         //    mail body: "project build error is here: ${env.BUILD_URL}" ,
         //    from: 'xxxx@yyyy.com',
@@ -55,7 +55,7 @@ pipeline {
        //     subject: 'project build failed',
        //     to: 'zzzz@yyyyy.com'
 
-        throw err
-    }
+      //  throw err
+   // }
 
-}
+//}
