@@ -1,7 +1,5 @@
-node('node') {
-
-
-    currentBuild.result = "SUCCESS"
+pipeline {
+    agent any
 
     try {
 
